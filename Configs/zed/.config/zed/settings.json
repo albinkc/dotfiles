@@ -1,0 +1,73 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  // Vim
+  "vim_mode": true,
+  "vim": {
+    "toggle_relative_line_numbers": true,
+    "use_system_clipboard": "always",
+    "use_multiline_find": true,
+    "use_smartcase_find": true,
+    "highlight_on_yank_duration": 200,
+    "custom_digraphs": {}
+  },
+  "project_panel": {
+    "dock": "right"
+  },
+  "features": {
+    "inline_completion_provider": "supermaven"
+  },
+  "autosave": "on_focus_change",
+  "ui_font_size": 16,
+  "buffer_font_size": 16,
+  "theme": {
+    "mode": "system",
+    "light": "Gruvbox Light Hard",
+    "dark": "Solarized Dark"
+  },
+  "languages": {
+    "Elixir": {
+      "format_on_save": {
+        "external": {
+          "command": "mix",
+          "arguments": ["format", "--stdin-filename", "{buffer_path}", "-"]
+        }
+      },
+      "language_servers": ["elixir-ls"] // <- `next-ls` or `lexical`
+    },
+    "HEEX": {
+      "format_on_save": {
+        "external": {
+          "command": "mix",
+          "arguments": ["format", "--stdin-filename", "{buffer_path}", "-"]
+        }
+      },
+      "language_servers": [
+        "elixir-ls",
+        "tailwindcss-language-server",
+        "emmet-language-server"
+      ]
+    }
+  },
+  "lsp": {
+    // "elixir-ls": {
+    //   "settings": {
+    //     "dialyzerEnabled": false
+    //   }
+    // },
+    "tailwindcss-language-server": {
+      "settings": {
+        "includeLanguages": {
+          "heex": "html",
+          "Elixir": "html"
+        }
+      }
+    }
+  }
+}

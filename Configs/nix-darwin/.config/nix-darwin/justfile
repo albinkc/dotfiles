@@ -1,0 +1,39 @@
+default: usage
+
+usage:
+  @echo "Usage:"
+  @echo "  just reset - Remove all Neovim configs (prompts for confirmation)"
+
+[confirm("\u{1b}[31mAre you sure you want to delete everything? This action is irreversible. [y/N]\u{1b}[0m")]
+reset:
+    @echo "Removing Neovim configurations..."
+    rm -rf ~/.config/nvim
+    rm -rf ~/.local/share/nvim
+    rm -rf ~/.local/state/nvim
+    rm -rf ~/.cache/nvim
+    @echo "Neovim configurations removed."
+
+lv:
+    @echo "Installing LazyVim..."
+    git clone https://github.com/LazyVim/starter ~/.config/nvim
+    rm -rf ~/.config/nvim/.git
+
+conf:
+    @echo Migrating configs
+    ls
+
+
+first_run:
+    nix run nix-darwin -- switch --flake ~/.config/nix-darwin#Macbook
+
+apply:
+    darwin-rebuild switch --flake ~/.config/nix-darwin#Macbook --show-trace
+
+brew_upgrade_all:
+    brew upgrade --greedy
+
+get_defaults:
+    for i in `defaults domains | tr ',' '\n'`; do echo "********* READING DEFAULT DOMAIN $i **********"; echo; defaults read $i; done
+
+refresh:
+    /System/Library/PrivateFrameworks/SystemAdministration.framework/Resources/activateSettings -u
