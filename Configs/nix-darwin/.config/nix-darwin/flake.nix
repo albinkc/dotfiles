@@ -11,6 +11,7 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     nix-darwin.url = "github:LnL7/nix-darwin";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
+    # glimpse.url = "github:seatedro/glimpse";
   };
 
   outputs = inputs@{ self, nix-darwin, nixpkgs }:
@@ -24,14 +25,17 @@
           git
           vim
           elixir
+          jq
           zellij
           just
           bat
           nixd
+          nil
           wget
-          tuckr
+          # tuckr
           broot
-          # whatsapp-for-mac
+          eza
+          # asahi-bless #not supported on macOS
 
           # for lazyvim
           fzf
@@ -71,12 +75,16 @@
   # '';
       homebrew = {
         enable = true;
+        taps = [
+          # "seatedro/glimpse"
+        ];
         brews = [
           # {
             # name = "neovim";
             # args = [ "HEAD" ];
           # }
           "luarocks"
+          # "glimpse"
         ];
         masApps = {
           "Numbers" = 409203825;
@@ -85,6 +93,7 @@
           "Tot" = 1491071483;
           "Amphetamine" = 937984704;
           "Paste - Endless Clipboard" = 967805235;
+          "Whatsapp Messenger" = 310633997;
         };
         casks = [
           "lulu"
@@ -97,6 +106,8 @@
           "pearcleaner"
           "bartender"
           "libreoffice"
+          "protonvpn"
+          "neovide"
           # "ciphey" # for fun
         ];
       };
@@ -164,6 +175,7 @@
           persistent-apps = [
             /Applications/Firefox.app
             /Applications/Ghostty.app
+            /Applications/Neovide.app
           ];
       	};
 
