@@ -27,7 +27,7 @@ first_run:
     nix run nix-darwin -- switch --flake ~/.config/nix-darwin#Macbook
 
 apply:
-    darwin-rebuild switch --flake ~/.config/nix-darwin#Macbook --show-trace
+    darwin-rebuild switch --flake .#Macbook --show-trace
 
 brew_upgrade_all:
     brew upgrade --greedy

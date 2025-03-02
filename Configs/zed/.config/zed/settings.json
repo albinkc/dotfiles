@@ -16,7 +16,7 @@
     },
     "version": "2"
   },
-  "icon_theme": "Catppuccin Frappé",
+  "icon_theme": "Material Icon Theme",
   "vim_mode": true,
   "vim": {
     "toggle_relative_line_numbers": true,
@@ -38,7 +38,7 @@
   "buffer_font_size": 15.0,
   "theme": {
     "mode": "system",
-    "light": "Gruvbox Light Hard",
+    "light": "Catppuccin Latte",
     "dark": "Catppuccin Frappé"
   },
   "terminal": {
@@ -56,7 +56,7 @@
       },
       // "language_servers": ["lexical", "!elixir-ls"] // <- `next-ls` or `lexical`
       // "language_servers": ["elixir-ls"] // <- `next-ls` or `lexical`
-      "language_servers": ["lexical"] // <- `next-ls` or `lexical`
+      "language_servers": ["next-ls"] // <- `next-ls` or `lexical`
     },
     "HEEX": {
       "format_on_save": {
