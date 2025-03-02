@@ -42,6 +42,7 @@
           skim
           asitop
           mise
+          uv
           # asahi-bless #not supported on macOS
 
           # JS
@@ -117,7 +118,7 @@
           "karabiner-elements"
           "firefox"
           "zed"
-          "ghostty"
+            # "ghostty"
           "visual-studio-code"
           "pearcleaner"
           "bartender"
