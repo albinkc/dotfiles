@@ -41,8 +41,8 @@
           jujutsu
           skim
           asitop
-          mise
-          uv
+          # mise
+          # uv
           # asahi-bless #not supported on macOS
 
           # JS
@@ -219,6 +219,7 @@
             "/Applications/Firefox.app"
             "/Applications/Ghostty.app"
             "/Applications/Neovide.app"
+            "/Applications/Zen.app"
           ];
           # Group windows by app in expose / for aerospace
           expose-group-apps = true;
