@@ -1,0 +1,185 @@
+{
+  "type" : "group",
+  "actions" : [
+    {
+      "label" : "",
+      "key" : "t",
+      "type" : "application",
+      "value" : "/Applications/Ghostty.app"
+    },
+    {
+      "type" : "group",
+      "label" : "Raycast",
+      "key" : "r",
+      "actions" : [
+        {
+          "type" : "url",
+          "value" : "raycast://extensions/raycast/emoji-symbols/search-emoji-symbols",
+          "label" : "",
+          "key" : "e"
+        },
+        {
+          "type" : "url",
+          "value" : "raycast://confetti",
+          "key" : "p",
+          "label" : ""
+        },
+        {
+          "key" : "c",
+          "type" : "url",
+          "label" : "",
+          "value" : "raycast://extensions/raycast/system/open-camera"
+        }
+      ]
+    },
+    {
+      "type" : "group",
+      "label" : "Browsers",
+      "actions" : [
+        {
+          "value" : "/Applications/Firefox.app",
+          "type" : "application",
+          "key" : "f",
+          "label" : ""
+        },
+        {
+          "type" : "application",
+          "key" : "c",
+          "label" : "",
+          "value" : "/Applications/Chromium.app"
+        },
+        {
+          "value" : "/Applications/Arc.app",
+          "label" : "",
+          "type" : "application",
+          "key" : "a"
+        },
+        {
+          "value" : "/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app",
+          "key" : "s",
+          "label" : "",
+          "type" : "application"
+        },
+        {
+          "label" : "",
+          "value" : "/Applications/Zen.app",
+          "type" : "application",
+          "key" : "z"
+        }
+      ],
+      "key" : "b"
+    },
+    {
+      "label" : "Editors",
+      "type" : "group",
+      "actions" : [
+        {
+          "value" : "/Applications/BBEdit.app",
+          "label" : "",
+          "type" : "application",
+          "key" : "b"
+        },
+        {
+          "type" : "application",
+          "key" : "v",
+          "label" : "",
+          "value" : "/Applications/Visual Studio Code.app"
+        },
+        {
+          "type" : "application",
+          "label" : "",
+          "key" : "z",
+          "value" : "/Applications/Zed.app"
+        },
+        {
+          "type" : "application",
+          "label" : "",
+          "key" : "n",
+          "value" : "/Applications/Neovide.app"
+        },
+        {
+          "label" : "",
+          "type" : "application",
+          "key" : "c",
+          "value" : "/Applications/Cursor.app"
+        }
+      ],
+      "key" : "e"
+    },
+    {
+      "key" : "c",
+      "actions" : [
+        {
+          "type" : "application",
+          "key" : "m",
+          "label" : "",
+          "value" : "/System/Applications/Mail.app"
+        },
+        {
+          "label" : "",
+          "type" : "application",
+          "value" : "/Applications/WhatsApp.app",
+          "key" : "w"
+        },
+        {
+          "type" : "application",
+          "value" : "/System/Applications/FaceTime.app",
+          "key" : "f",
+          "label" : ""
+        },
+        {
+          "key" : "e",
+          "type" : "application",
+          "value" : "/System/Applications/Messages.app",
+          "label" : ""
+        }
+      ],
+      "type" : "group",
+      "label" : "Communication"
+    },
+    {
+      "key" : "s",
+      "label" : "System Settings",
+      "type" : "application",
+      "value" : "/System/Applications/System Settings.app"
+    },
+    {
+      "label" : "Apps",
+      "type" : "group",
+      "key" : "a",
+      "actions" : [
+        {
+          "value" : "/System/Applications/Books.app",
+          "label" : "",
+          "type" : "application",
+          "key" : "b"
+        }
+      ]
+    },
+    {
+      "label" : "Folders",
+      "key" : "f",
+      "type" : "group",
+      "actions" : [
+        {
+          "key" : "d",
+          "type" : "folder",
+          "label" : "",
+          "value" : "/Users/albin/Downloads"
+        },
+        {
+          "type" : "folder",
+          "key" : "s",
+          "label" : "",
+          "value" : "/Users/albin/Library/Application Support/shadPS4"
+        }
+      ]
+    },
+    {
+      "label" : "",
+      "key" : "v",
+      "type" : "application",
+      "value" : "/Applications/ProtonVPN.app"
+    }
+  ]
+}

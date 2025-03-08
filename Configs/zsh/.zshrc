@@ -10,10 +10,11 @@ alias nd="cd ~/.config/nix-darwin/"
 alias vind="nvim ~/.config/nix-darwin/flake.nix"
 
 alias vish="nvim ~/.zshrc"
-alias scsh="source ~/zshrc"
+alias scsh="source ~/.zshrc"
 alias va="source ~/.zshrc"
 
 alias gc="git clone"
+alias lg="lazygit"
 
 # alias ja="just --working-directory ~/.config/nix-darwin apply"
 alias ja="just --justfile ~/.config/nix-darwin/justfile \
