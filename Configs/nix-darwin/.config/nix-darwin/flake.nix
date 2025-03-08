@@ -79,7 +79,7 @@
 
       # The platform the configuration will be used on.
       nixpkgs.hostPlatform = "aarch64-darwin";
-      security.pam.enableSudoTouchIdAuth = true;
+      security.pam.services.sudo_local.touchIdAuth = true;
 
       system.activationScripts.postUserActivation.text = ''
       # Following line should allow us to avoid a logout/login cycle
@@ -97,7 +97,7 @@
           # }
           "zsh-completions"
           "luarocks"
-          "elixir-ls"
+          # "elixir-ls"
           # "glimpse"
         ];
         masApps = {
@@ -111,6 +111,7 @@
           "BBEdit" = 404009241;
           "Yomu EBook Reader" = 562211012;
           "The Unarchiver" = 425424353;
+          "WireGuard" = 1451685025;
         };
         casks = [
           "lulu"
@@ -151,6 +152,13 @@
               AppleSymbolicHotKeys = {
                 "60" = { enabled = false; };
               };
+            };
+
+            # IINA settings
+            "com.colliderli.iina" = {
+              enableAdvancedSettings = 1;
+              useUserDefinedConfDir = 1;
+              userDefinedConfDir = "~/.config/mpv";
             };
           };
 
@@ -208,9 +216,9 @@
           show-recents = false;
           scroll-to-open = true;
           persistent-apps = [
-            /Applications/Firefox.app
-            /Applications/Ghostty.app
-            /Applications/Neovide.app
+            "/Applications/Firefox.app"
+            "/Applications/Ghostty.app"
+            "/Applications/Neovide.app"
           ];
           # Group windows by app in expose / for aerospace
           expose-group-apps = true;
