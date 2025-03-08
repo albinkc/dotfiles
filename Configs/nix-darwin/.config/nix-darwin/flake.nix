@@ -97,6 +97,7 @@
           # }
           "zsh-completions"
           "luarocks"
+          "leader-key"
           # "elixir-ls"
           # "glimpse"
         ];
