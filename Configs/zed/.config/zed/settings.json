@@ -8,11 +8,24 @@
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
   // Vim
+  "edit_predictions": {
+    "disabled_globs": [],
+    "mode": "eager",
+    // "copilot": {
+    //   "proxy": null,
+    //   "proxy_no_verify": null
+    // },
+    "enabled_in_assistant": true
+  },
+  "telemetry": {
+    "metrics": false,
+    "diagnostics": false
+  },
   "assistant": {
     "dock": "left",
     "default_model": {
-      "provider": "copilot_chat",
-      "model": "claude-3-5-sonnet"
+      "provider": "zed.dev",
+      "model": "claude-3-7-sonnet-latest"
     },
     "version": "2"
   },
@@ -33,13 +46,13 @@
     "edit_prediction_provider": "zed"
   },
   "autosave": "on_focus_change",
-  "buffer_font_family": "Berkley Mono Nerd Font",
+  "buffer_font_family": "JetBrainsMono Nerd Font",
   "ui_font_size": 16,
   "buffer_font_size": 15.0,
   "theme": {
     "mode": "system",
     "light": "Catppuccin Latte",
-    "dark": "Catppuccin Frappé"
+    "dark": "Catppuccin Macchiato (Blue Blur+)"
   },
   "terminal": {
     // "font_family": "Berkley Mono Nerd Font",
@@ -78,6 +91,13 @@
     //     "dialyzerEnabled": false
     //   }
     // },
+    "nil": {
+      "initialization_options": {
+        "formatting": {
+          "command": ["nixfmt"]
+        }
+      }
+    },
     "tailwindcss-language-server": {
       "settings": {
         "includeLanguages": {
