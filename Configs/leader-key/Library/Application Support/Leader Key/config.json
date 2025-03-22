@@ -138,9 +138,9 @@
     },
     {
       "key" : "s",
-      "label" : "System Settings",
-      "type" : "application",
-      "value" : "/System/Applications/System Settings.app"
+      "label" : "Privacy & Security",
+      "type" : "command",
+      "value" : "open \"x-apple.systempreferences:com.apple.preference.security\""
     },
     {
       "actions" : [
@@ -149,6 +149,12 @@
           "label" : "",
           "type" : "application",
           "value" : "/System/Applications/Books.app"
+        },
+        {
+          "key" : "a",
+          "label" : "",
+          "type" : "application",
+          "value" : "/System/Applications/Utilities/Activity Monitor.app"
         }
       ],
       "key" : "a",
@@ -179,6 +185,19 @@
       "label" : "",
       "type" : "application",
       "value" : "/Applications/ProtonVPN.app"
+    },
+    {
+      "actions" : [
+        {
+          "key" : "t",
+          "label" : "",
+          "type" : "command",
+          "value" : "/opt/homebrew/bin/zed  ~/projects/tunez"
+        }
+      ],
+      "key" : "p",
+      "label" : "",
+      "type" : "group"
     }
   ],
   "type" : "group"
