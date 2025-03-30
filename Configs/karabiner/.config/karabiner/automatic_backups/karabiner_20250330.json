@@ -4,34 +4,24 @@
             "complex_modifications": {
                 "rules": [
                     {
-                        "description": "Map right_command + right_option to right_control",
+                        "description": "Map Ctrl-Backspace to forward Delete (forward delete one character at a time).",
                         "manipulators": [
                             {
                                 "from": {
-                                    "key_code": "right_option",
+                                    "key_code": "delete_or_backspace",
                                     "modifiers": {
-                                        "mandatory": ["right_command"],
+                                        "mandatory": ["control"],
                                         "optional": ["any"]
                                     }
                                 },
-                                "to": [{ "key_code": "right_control" }],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "key_code": "right_command",
-                                    "modifiers": {
-                                        "mandatory": ["right_option"],
-                                        "optional": ["any"]
-                                    }
-                                },
-                                "to": [{ "key_code": "right_control" }],
+                                "to": [{ "key_code": "delete_forward" }],
                                 "type": "basic"
                             }
                         ]
                     },
                     {
-                        "description": "Restore Caps Lock as Esc",
+                        "description": "Change Esc to Caps Lock",
+                        "enabled": false,
                         "manipulators": [
                             {
                                 "from": {
@@ -39,20 +29,6 @@
                                     "modifiers": { "optional": ["any"] }
                                 },
                                 "to": [{ "key_code": "caps_lock" }],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "Caps Lock to Esc and Ctrl",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "caps_lock",
-                                    "modifiers": { "optional": ["any"] }
-                                },
-                                "to": [{ "key_code": "left_control" }],
-                                "to_if_alone": [{ "key_code": "escape" }],
                                 "type": "basic"
                             }
                         ]
@@ -107,24 +83,7 @@
                         ]
                     },
                     {
-                        "description": "Map Ctrl-Backspace to forward Delete (forward delete one character at a time).",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "delete_or_backspace",
-                                    "modifiers": {
-                                        "mandatory": ["control"],
-                                        "optional": ["any"]
-                                    }
-                                },
-                                "to": [{ "key_code": "delete_forward" }],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
                         "description": "Change caps_lock to left_control if pressed with other keys, change caps_lock to escape if pressed alone.",
-                        "enabled": false,
                         "manipulators": [
                             {
                                 "from": {

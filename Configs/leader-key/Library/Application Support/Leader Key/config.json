@@ -190,13 +190,13 @@
       "actions" : [
         {
           "key" : "t",
-          "label" : "",
+          "label" : "Tunez",
           "type" : "command",
           "value" : "/opt/homebrew/bin/zed  ~/projects/tunez"
         }
       ],
       "key" : "p",
-      "label" : "",
+      "label" : "Projects",
       "type" : "group"
     }
   ],
