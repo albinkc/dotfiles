@@ -23,9 +23,9 @@ alias ja="just --justfile ~/.config/nix-darwin/justfile \
              apply"
 
 #Elixir
-alias im="iex -S mix"
-alias ims="iex -S mix phx.server"
-alias ms="mix phx.server"
+alias im="source .env && iex -S mix"
+alias ims="source .env && iex -S mix phx.server"
+alias ms="source .env && mix phx.server"
 export ERL_AFLAGS="-kernel shell_history enabled"
 
 export EDITOR=nvim
@@ -48,3 +48,4 @@ fpath=(/Users/albin/.docker/completions $fpath)
 autoload -Uz compinit
 compinit
 # End of Docker CLI completions
+export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
