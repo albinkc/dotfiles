@@ -7,6 +7,30 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "context_servers": {
+    "phoenix-mcp-server": {
+      "command": {
+        "path": "/Users/albin/.mix/escripts/mcp-proxy",
+        "args": [
+          "http://localhost:4000/tidewave/mcp"
+        ],
+        "env": null
+      },
+      "settings": {}
+    },
+    "phoenix-mcp": {
+      "command": {
+        "path": "/Users/albin/.mix/escripts/mcp-proxy",
+        "args": [
+          "http://localhost:4000/tidewave/mcp"
+        ],
+        "env": null
+      },
+      "settings": {}
+    }
+  },
+  "auto_update": false,
+  "show_edit_predictions": false,
   "use_system_prompts": false,
   // Vim
   "edit_predictions": {
@@ -19,20 +43,46 @@
     "diagnostics": false
   },
   "assistant": {
+    "always_allow_tool_actions": false,
     "default_profile": "write",
     "profiles": {
+      "ask": {
+        "name": "Ask",
+        "tools": {
+          "terminal": false,
+          "contents": true,
+          "diagnostics": true,
+          "fetch": true,
+          "list_directory": false,
+          "now": true,
+          "find_path": true,
+          "read_file": true,
+          "open": true,
+          "grep": true,
+          "thinking": false,
+          "web_search": true
+        },
+        "enable_all_context_servers": false,
+        "context_servers": {
+          "phoenix-mcp": {
+            "tools": {
+              "execute_sql_query": false
+            }
+          }
+        }
+      },
       "write-2": {
         "name": "write2",
         "tools": {
           "open": true,
-          "bash": true,
+          "terminal": true,
           "batch_tool": true,
           "code_symbols": true,
           "copy_path": true,
           "create_file": true,
           "delete_path": true,
           "diagnostics": true,
-          "find_replace_file": true,
+          "edit_file": true,
           "edit_files": true,
           "fetch": true,
           "list_directory": true,
@@ -40,7 +90,7 @@
           "now": true,
           "path_search": true,
           "read_file": true,
-          "regex_search": true,
+          "grep": true,
           "symbol_info": true,
           "thinking": true,
           "create_directory": true
@@ -52,14 +102,14 @@
         "name": "Write",
         "tools": {
           "open": true,
-          "bash": true,
+          "terminal": true,
           "batch_tool": true,
           "code_symbols": true,
           "copy_path": true,
           "create_file": true,
           "delete_path": true,
           "diagnostics": true,
-          "find_replace_file": true,
+          "edit_file": true,
           "edit_files": true,
           "fetch": true,
           "list_directory": true,
@@ -67,7 +117,7 @@
           "now": true,
           "path_search": true,
           "read_file": true,
-          "regex_search": true,
+          "grep": true,
           "symbol_info": true,
           "thinking": true,
           "create_directory": true
@@ -79,7 +129,7 @@
     "dock": "left",
     "default_model": {
       "provider": "zed.dev",
-      "model": "claude-3-5-sonnet-latest"
+      "model": "claude-3-7-sonnet-latest"
     },
     "version": "2"
   },
@@ -105,7 +155,7 @@
   "buffer_font_size": 15.0,
   "theme": {
     "mode": "system",
-    "light": "Gruvbox Light Soft",
+    "light": "Solarized Light",
     "dark": "Gruvbox Dark Soft"
   },
   "terminal": {

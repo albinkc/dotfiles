@@ -66,13 +66,15 @@
             skim
             asitop
             difftastic
+            carapace
             # uv
             # asahi-bless #not supported on macOS
             # JS
             # nodePackages_latest.nodejs
             biome
+            wasm-language-tools
 
-            # for lazyvim
+            # for neovim
             fzf
             ripgrep
             lazygit
@@ -81,6 +83,7 @@
             viu
             chafa
             ueberzugpp
+            delta
             # ast-grep # sg command not working on nix, brew for now
             mpv
           ];
@@ -122,15 +125,21 @@
           };
           homebrew = {
             enable = true;
+            onActivation = {
+              upgrade = true; # Enable upgrading outdated formulae
+              autoUpdate = true; # Enable Homebrew to auto-update itself
+            };
             caskArgs.no_quarantine = true;
 
             taps = [
               # "seatedro/glimpse"
+              "domt4/autoupdate"
             ];
             brews = [
+              "pinentry-mac"
               {
                 name = "neovim";
-                args = [ "HEAD" ];
+                # args = [ "HEAD" ];
               }
               "zsh-completions"
               "luarocks"
@@ -309,12 +318,13 @@
               show-recents = false;
               showhidden = true;
               scroll-to-open = true;
-              persistent-apps = [
-                "/Applications/Zen.app"
-                "/Applications/Firefox.app"
-                "/Applications/Ghostty.app"
-                "/Applications/Neovide.app"
-              ];
+              # RUN ONCE #
+              # persistent-apps = [
+              #   "/Applications/Zen.app"
+              #   "/Applications/Firefox.app"
+              #   "/Applications/Ghostty.app"
+              #   "/Applications/Neovide.app"
+              # ];
               # persistent-others = [
               # "~/projects/"
               # ];

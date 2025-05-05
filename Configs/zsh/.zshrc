@@ -10,6 +10,8 @@ alias nd="cd ~/.config/nix-darwin/"
 alias vind="nvim /etc/nix-darwin/flake.nix"
 alias drs="darwin-rebuild switch"
 
+alias zp="zed-preview"
+
 alias vish="nvim ~/.zshrc"
 alias scsh="source ~/.zshrc"
 alias va="source ~/.zshrc"
@@ -27,6 +29,8 @@ alias im="source .env && iex -S mix"
 alias ims="source .env && iex -S mix phx.server"
 alias ms="source .env && mix phx.server"
 export ERL_AFLAGS="-kernel shell_history enabled"
+## Run after elixir otp upgrades or when elixir-ls is broken
+alias clean_beam='rm -rf _build deps .elixir_ls && mix deps.get && mix compile'
 
 export EDITOR=nvim
 # Enable Vim mode in Zsh
@@ -49,3 +53,9 @@ autoload -Uz compinit
 compinit
 # End of Docker CLI completions
 export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
+
+# Secretive Config
+export SSH_AUTH_SOCK=/Users/albin/Library/Containers/com.maxgoedjen.Secretive.SecretAgent/Data/socket.ssh
+
+# Add Elixir mix escripts to PATH
+export PATH="/Users/albin/.mix/escripts:$PATH"

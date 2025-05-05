@@ -2,7 +2,6 @@
   "actions" : [
     {
       "key" : "t",
-      "label" : "",
       "type" : "application",
       "value" : "/Applications/Ghostty.app"
     },
@@ -10,19 +9,16 @@
       "actions" : [
         {
           "key" : "e",
-          "label" : "",
           "type" : "url",
           "value" : "raycast://extensions/raycast/emoji-symbols/search-emoji-symbols"
         },
         {
           "key" : "p",
-          "label" : "",
           "type" : "url",
           "value" : "raycast://confetti"
         },
         {
           "key" : "c",
-          "label" : "",
           "type" : "url",
           "value" : "raycast://extensions/raycast/system/open-camera"
         }
@@ -35,31 +31,26 @@
       "actions" : [
         {
           "key" : "f",
-          "label" : "",
           "type" : "application",
           "value" : "/Applications/Firefox.app"
         },
         {
           "key" : "c",
-          "label" : "",
           "type" : "application",
           "value" : "/Applications/Chromium.app"
         },
         {
           "key" : "a",
-          "label" : "",
           "type" : "application",
           "value" : "/Applications/Arc.app"
         },
         {
           "key" : "s",
-          "label" : "",
           "type" : "application",
           "value" : "/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app"
         },
         {
           "key" : "z",
-          "label" : "",
           "type" : "application",
           "value" : "/Applications/Zen.app"
         }
@@ -72,33 +63,33 @@
       "actions" : [
         {
           "key" : "b",
-          "label" : "",
           "type" : "application",
           "value" : "/Applications/BBEdit.app"
         },
         {
           "key" : "v",
-          "label" : "",
           "type" : "application",
           "value" : "/Applications/Visual Studio Code.app"
         },
         {
           "key" : "z",
-          "label" : "",
           "type" : "application",
           "value" : "/Applications/Zed.app"
         },
         {
           "key" : "n",
-          "label" : "",
           "type" : "application",
           "value" : "/Applications/Neovide.app"
         },
         {
           "key" : "c",
-          "label" : "",
           "type" : "application",
           "value" : "/Applications/Cursor.app"
+        },
+        {
+          "key" : "p",
+          "type" : "application",
+          "value" : "/Applications/Zed Preview.app"
         }
       ],
       "key" : "e",
@@ -109,25 +100,21 @@
       "actions" : [
         {
           "key" : "m",
-          "label" : "",
           "type" : "application",
           "value" : "/System/Applications/Mail.app"
         },
         {
           "key" : "w",
-          "label" : "",
           "type" : "application",
           "value" : "/Applications/WhatsApp.app"
         },
         {
           "key" : "f",
-          "label" : "",
           "type" : "application",
           "value" : "/System/Applications/FaceTime.app"
         },
         {
           "key" : "e",
-          "label" : "",
           "type" : "application",
           "value" : "/System/Applications/Messages.app"
         }
@@ -146,13 +133,11 @@
       "actions" : [
         {
           "key" : "b",
-          "label" : "",
           "type" : "application",
           "value" : "/System/Applications/Books.app"
         },
         {
           "key" : "a",
-          "label" : "",
           "type" : "application",
           "value" : "/System/Applications/Utilities/Activity Monitor.app"
         }
@@ -165,13 +150,11 @@
       "actions" : [
         {
           "key" : "d",
-          "label" : "",
           "type" : "folder",
           "value" : "/Users/albin/Downloads"
         },
         {
           "key" : "s",
-          "label" : "",
           "type" : "folder",
           "value" : "/Users/albin/Library/Application Support/shadPS4"
         }
@@ -182,7 +165,6 @@
     },
     {
       "key" : "v",
-      "label" : "",
       "type" : "application",
       "value" : "/Applications/ProtonVPN.app"
     },
@@ -198,6 +180,11 @@
       "key" : "p",
       "label" : "Projects",
       "type" : "group"
+    },
+    {
+      "key" : "g",
+      "type" : "command",
+      "value" : ""
     }
   ],
   "type" : "group"

@@ -1,0 +1,11 @@
+r1:
+  defaults read > 1
+
+r2:
+  defaults read > 2
+
+diff:
+  difft 1 2
+
+rm:
+  rm 1 2
