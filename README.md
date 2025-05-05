@@ -10,4 +10,5 @@
 
 ### Force Homebrew update every 2 hours, now, and on system boot.
 ⚠️ Be cognizant of the pitfalls of this
+
 `brew autoupdate start 7200 --upgrade --greedy --cleanup --immediate --sudo`
