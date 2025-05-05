@@ -85,7 +85,6 @@
             ueberzugpp
             delta
             # ast-grep # sg command not working on nix, brew for now
-            mpv
           ];
 
           # Necessary for using flakes on this system.
@@ -168,9 +167,9 @@
               "iina"
               "karabiner-elements"
               "firefox"
-              "zen-browser"
+              # "zen-browser"
               "eloston-chromium"
-              # "zed"
+              "zed"
               "ghostty"
               "warp"
               "visual-studio-code"
