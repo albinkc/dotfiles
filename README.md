@@ -1,6 +1,10 @@
 # dotfiles
 
 ## Instructions
+  `git clone https://github.com/albinkc/dotfiles ~/.dotfiles`
+
+  `sh ~/.dotfiles/init_macos.sh`
+
   1. install tuckr
   3. symlink configs
   4. install nix (determinate systems)
