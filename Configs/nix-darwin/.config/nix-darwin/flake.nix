@@ -21,7 +21,7 @@
           # Let determinate handle nix
           nix.enable = false;
 
-          environment.etc.nix-darwin.source = "/Users/albin/.config/nix-darwin";
+          # environment.etc.nix-darwin.source = "$HOME/.config/nix-darwin";
 
           networking = {
             knownNetworkServices = [
@@ -204,6 +204,7 @@
 
           system.defaults = {
             CustomUserPreferences = {
+
               # Disable System Ctrl+Space so that VSCODE/Zed's works
               "com.apple.symbolichotkeys" = {
                 AppleSymbolicHotKeys = {
@@ -228,9 +229,9 @@
                 AnalyticsEnabled = 0;
               };
 
-              "com.apple.systemsound" = {
-                com.apple.sound.uiaudio.enabled = 0; # check
-              };
+              # "com.apple.systemsound" = {
+              #   com.apple.sound.uiaudio.enabled = 0; # check
+              # };
               # "com.apple.Safari" = {
               #   # Privacy: don’t send search queries to Apple
               #   UniversalSearchEnabled = false;
@@ -317,13 +318,12 @@
               show-recents = false;
               showhidden = true;
               scroll-to-open = true;
-              # RUN ONCE #
-              # persistent-apps = [
-              #   "/Applications/Zen.app"
-              #   "/Applications/Firefox.app"
-              #   "/Applications/Ghostty.app"
-              #   "/Applications/Neovide.app"
-              # ];
+              # RUN ONCE
+              persistent-apps = [
+                "/Applications/Firefox.app"
+                "/Applications/Ghostty.app"
+                "/Applications/Neovide.app"
+              ];
               # persistent-others = [
               # "~/projects/"
               # ];
@@ -342,7 +342,7 @@
               ShowRemovableMediaOnDesktop = false;
               # “icnv” = Icon view, “Nlsv” = List view, “clmv” = Column View,
               # “Flwv” = Gallery View
-              FXPreferredViewStyle = "clmv";
+              FXPreferredViewStyle = "Nlsv";
               FXDefaultSearchScope = "SCcf";
               FXEnableExtensionChangeWarning = false;
               QuitMenuItem = true;
@@ -381,19 +381,20 @@
             };
 
             CustomSystemPreferences = {
+              # Turn on app auto-update
+              "com.apple.commerce".AutoUpdate = true;
+              # dud
+              "com.apple.sound.uiaudio" = {
+                enabled = 0;
+              };
               "com.apple.Safari" = {
                 "com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled" = true;
               };
 
               # App Store
               "com.apple.AppStore" = {
-                InAppReviewEnabled = 1;
+                InAppReviewEnabled = 0;
               };
-            };
-            CustomUserPreferences = {
-              # Turn on app auto-update
-              # "com.apple.commerce".AutoUpdate = true;
-
               NSGlobalDomain = {
                 # Add a context menu item for showing the Web Inspector in web views
                 WebKitDeveloperExtras = true;
@@ -404,6 +405,7 @@
               };
 
             };
+
           };
 
         };
