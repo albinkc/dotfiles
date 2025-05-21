@@ -8,22 +8,10 @@
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
   "context_servers": {
-    "phoenix-mcp-server": {
+    "tidewave": {
       "command": {
-        "path": "/Users/albin/.mix/escripts/mcp-proxy",
-        "args": [
-          "http://localhost:4000/tidewave/mcp"
-        ],
-        "env": null
-      },
-      "settings": {}
-    },
-    "phoenix-mcp": {
-      "command": {
-        "path": "/Users/albin/.mix/escripts/mcp-proxy",
-        "args": [
-          "http://localhost:4000/tidewave/mcp"
-        ],
+        "path": "/Users/albin/projects/mcp-proxy",
+        "args": ["http://localhost:4000/tidewave/mcp"],
         "env": null
       },
       "settings": {}
@@ -36,15 +24,15 @@
   "edit_predictions": {
     "disabled_globs": [],
     "mode": "eager",
-    "enabled_in_assistant": true
+    "enabled_in_text_threads": true
   },
   "telemetry": {
     "metrics": false,
     "diagnostics": false
   },
-  "assistant": {
-    "always_allow_tool_actions": false,
-    "default_profile": "write",
+  "agent": {
+    "always_allow_tool_actions": true,
+    "default_profile": "ask",
     "profiles": {
       "ask": {
         "name": "Ask",
@@ -71,33 +59,6 @@
           }
         }
       },
-      "write-2": {
-        "name": "write2",
-        "tools": {
-          "open": true,
-          "terminal": true,
-          "batch_tool": true,
-          "code_symbols": true,
-          "copy_path": true,
-          "create_file": true,
-          "delete_path": true,
-          "diagnostics": true,
-          "edit_file": true,
-          "edit_files": true,
-          "fetch": true,
-          "list_directory": true,
-          "move_path": true,
-          "now": true,
-          "path_search": true,
-          "read_file": true,
-          "grep": true,
-          "symbol_info": true,
-          "thinking": true,
-          "create_directory": true
-        },
-        "enable_all_context_servers": true,
-        "context_servers": {}
-      },
       "write": {
         "name": "Write",
         "tools": {
@@ -115,7 +76,7 @@
           "list_directory": true,
           "move_path": true,
           "now": true,
-          "path_search": true,
+          "find_path": true,
           "read_file": true,
           "grep": true,
           "symbol_info": true,
@@ -133,7 +94,7 @@
     },
     "version": "2"
   },
-  "icon_theme": "Material Icon Theme",
+  "icon_theme": "Catppuccin Macchiato",
   "vim_mode": true,
   "vim": {
     "toggle_relative_line_numbers": true,
@@ -156,32 +117,21 @@
   "theme": {
     "mode": "system",
     "light": "Solarized Light",
-    "dark": "Gruvbox Dark Soft"
+    "dark": "Catppuccin Macchiato"
   },
   "terminal": {
-    // "font_family": "Berkley Mono Nerd Font",
     "font_family": "JetBrainsMono Nerd Font",
     "font_features": {}
   },
   "languages": {
+    "Shell Script": {
+      "show_edit_predictions": true
+    },
     "Elixir": {
-      "format_on_save": {
-        "external": {
-          "command": "mix",
-          "arguments": ["format", "--stdin-filename", "{buffer_path}", "-"]
-        }
-      },
-      // "language_servers": ["lexical", "!elixir-ls"] // <- `next-ls` or `lexical`
+      "show_edit_predictions": true,
       "language_servers": ["elixir-ls"] // <- `next-ls` or `lexical`
-      // "language_servers": ["next-ls"] // <- `next-ls` or `lexical`
     },
     "HEEX": {
-      "format_on_save": {
-        "external": {
-          "command": "mix",
-          "arguments": ["format", "--stdin-filename", "{buffer_path}", "-"]
-        }
-      },
       "language_servers": [
         "elixir-ls",
         "tailwindcss-language-server",
@@ -190,11 +140,6 @@
     }
   },
   "lsp": {
-    // "elixir-ls": {
-    //   "settings": {
-    //     "dialyzerEnabled": false
-    //   }
-    // },
     "nil": {
       "initialization_options": {
         "formatting": {

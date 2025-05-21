@@ -1,4 +1,10 @@
+t() {
+  [ $# -eq 0 ] && { echo "usage: t <path>"; return 1; }
+  mkdir -p -- "$(dirname -- "$1")" && touch -- "$1"
+}
+alias touch="t"
 alias ls="eza -A"
+alias n="nnn"
 alias tree="eza --tree"
 alias vi="nvim"
 alias ll="yazi"
