@@ -2,6 +2,13 @@ t() {
   [ $# -eq 0 ] && { echo "usage: t <path>"; return 1; }
   mkdir -p -- "$(dirname -- "$1")" && touch -- "$1"
 }
+
+bid () {
+  local app="$*"
+  [[ -z $app ]] && { echo "usage: bid <Application Name>"; return 1; }
+  osascript -e "id of app \"$app\""
+}
+
 alias touch="t"
 alias ls="eza -A"
 alias n="nnn"
@@ -15,6 +22,7 @@ alias np="cd ~/projects/nixos-config/"
 alias nd="cd ~/.config/nix-darwin/"
 alias vind="nvim /etc/nix-darwin/flake.nix"
 alias drs="darwin-rebuild switch"
+alias gif="git init && git add . && git commit -m \"initial commit\""
 
 alias zp="zed-preview"
 
@@ -38,7 +46,7 @@ export ERL_AFLAGS="-kernel shell_history enabled"
 ## Run after elixir otp upgrades or when elixir-ls is broken
 alias clean_beam='rm -rf _build deps .elixir_ls && mix deps.get && mix compile'
 
-export EDITOR=nvim
+export EDITOR=neovide
 # Enable Vim mode in Zsh
 bindkey -v
 # Set keybindings for switching modes
