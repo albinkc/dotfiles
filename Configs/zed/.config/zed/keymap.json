@@ -26,5 +26,17 @@
       // "shift-enter": "editor::ConfirmCompletionReplace",
       // "tab": "editor::ComposeCompletion"
     }
+  },
+  {
+    "context": "Terminal",
+    "bindings": {
+      "cmd-d": "pane::SplitRight"
+    }
+  },
+  {
+    "context": "Terminal",
+    "bindings": {
+      "cmd-shift-d": "pane::SplitUp"
+    }
   }
 ]
