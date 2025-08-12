@@ -9,6 +9,7 @@ bid () {
   osascript -e "id of app \"$app\""
 }
 
+alias p1="ping 1.1.1.1"
 alias touch="t"
 alias ls="eza -A"
 alias n="nnn"
@@ -21,8 +22,8 @@ alias nixos="cd /etc/nixos"
 alias np="cd ~/projects/nixos-config/"
 alias nd="cd ~/.config/nix-darwin/"
 alias vind="nvim /etc/nix-darwin/flake.nix"
-alias drs="darwin-rebuild switch"
-alias gif="git init && git add . && git commit -m \"initial commit\""
+alias drs="sudo darwin-rebuild switch"
+alias gi="git init && git add . && git commit -m \"initial commit\""
 
 alias zp="zed-preview"
 
@@ -51,6 +52,9 @@ export EDITOR=neovide
 bindkey -v
 # Set keybindings for switching modes
 bindkey '^R' history-incremental-search-backward  # Search history in normal mode
+# option + delete = delete word
+bindkey -M viins $'\e\x7f' backward-kill-word
+
 # mise
 eval "$(mise activate zsh)"
 
@@ -73,3 +77,11 @@ export SSH_AUTH_SOCK=/Users/albin/Library/Containers/com.maxgoedjen.Secretive.Se
 
 # Add Elixir mix escripts to PATH
 export PATH="/Users/albin/.mix/escripts:$PATH"
+eval "$(zoxide init zsh)"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# opencode
+export PATH=/Users/albin/.opencode/bin:$PATH
+export PATH=/Users/albin/.local/bin:$PATH
+

@@ -175,6 +175,12 @@
           "label" : "Tunez",
           "type" : "command",
           "value" : "/opt/homebrew/bin/zed  ~/projects/tunez"
+        },
+        {
+          "key" : "w",
+          "label" : "Tunez",
+          "type" : "command",
+          "value" : "/opt/homebrew/bin/zed-preview  ~/projects/willow"
         }
       ],
       "key" : "p",

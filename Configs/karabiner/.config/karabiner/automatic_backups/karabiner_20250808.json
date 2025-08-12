@@ -5,29 +5,6 @@
             "complex_modifications": {
                 "rules": [
                     {
-                        "description": "Swap Option+Delete and Delete",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "delete_or_backspace",
-                                    "modifiers": { "mandatory": ["option"] }
-                                },
-                                "to": [{ "key_code": "delete_or_backspace" }],
-                                "type": "basic"
-                            },
-                            {
-                                "from": { "key_code": "delete_or_backspace" },
-                                "to": [
-                                    {
-                                        "key_code": "delete_or_backspace",
-                                        "modifiers": ["option"]
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
                         "description": "Map Ctrl+Semicolon to Enter",
                         "manipulators": [
                             {

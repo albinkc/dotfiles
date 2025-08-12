@@ -1,0 +1,51 @@
+{
+  "profiles" : [
+    {
+      "id" : "5C2F6F7F-1F5E-4B8E-A14A-C50951B4F2B9",
+      "name" : "Default",
+      "workspaces" : [
+        {
+          "apps" : [
+            {
+              "bundleIdentifier" : "com.todesktop.230313mzl4w4u92",
+              "iconPath" : "/Applications/Cursor.app/Contents/Resources/Cursor.icns",
+              "name" : "Cursor"
+            }
+          ],
+          "display" : "Built-in Retina Display",
+          "id" : "F3D1BBFC-EAEE-4832-9262-6E3FF9807468",
+          "name" : "editor",
+          "shortcut" : "cmd+1"
+        },
+        {
+          "apps" : [
+            {
+              "bundleIdentifier" : "company.thebrowser.dia",
+              "iconPath" : "/Applications/Dia.app/Contents/Resources/AppIcon.icns",
+              "name" : "Dia"
+            }
+          ],
+          "display" : "Built-in Retina Display",
+          "id" : "A871DDFF-A4DD-4D9C-BC11-E276C11DFD44",
+          "name" : "browser",
+          "shortcut" : "cmd+2",
+          "symbolIconName" : "globe"
+        },
+        {
+          "apps" : [
+            {
+              "bundleIdentifier" : "com.mitchellh.ghostty",
+              "iconPath" : "/Applications/Ghostty.app/Contents/Resources/Ghostty.icns",
+              "name" : "Ghostty"
+            }
+          ],
+          "display" : "Built-in Retina Display",
+          "id" : "04782AD7-E252-4D39-99CF-F2655C317132",
+          "name" : "terminal",
+          "shortcut" : "cmd+0",
+          "symbolIconName" : "apple.terminal"
+        }
+      ]
+    }
+  ]
+}

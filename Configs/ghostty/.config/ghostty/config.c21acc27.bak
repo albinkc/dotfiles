@@ -3,4 +3,3 @@ cursor-click-to-move = true
 keybind = global:cmd+grave_accent=toggle_quick_terminal
 font-family = "JetBrainsMono Nerd Font Mono"
 quick-terminal-screen = mouse
-keybind = shift+enter=text:\n
