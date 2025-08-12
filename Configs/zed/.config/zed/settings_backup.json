@@ -7,6 +7,24 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "context_servers": {
+    "tidewave-mcp-server": {
+      "source": "custom",
+      "enabled": true,
+      "command": "/Users/albin/mcp-proxy",
+      "args": [
+        "http://localhost:4000/tidewave/mcp"
+      ],
+      "env": {
+                "PORT": "4000"
+            }
+    },
+    "tidewave": {
+      "source": "extension",
+      "enabled": true,
+      "settings": {}
+    }
+  },
   "auto_update": false,
   "show_edit_predictions": false,
   "use_system_prompts": false,
@@ -14,14 +32,15 @@
   "edit_predictions": {
     "disabled_globs": [],
     "mode": "eager",
-    "enabled_in_assistant": true
+    "enabled_in_text_threads": true
   },
   "telemetry": {
     "metrics": false,
     "diagnostics": false
   },
-  "assistant": {
-    "always_allow_tool_actions": false,
+  "agent": {
+    "play_sound_when_agent_done": true,
+    "always_allow_tool_actions": true,
     "default_profile": "write",
     "profiles": {
       "ask": {
@@ -49,33 +68,6 @@
           }
         }
       },
-      "write-2": {
-        "name": "write2",
-        "tools": {
-          "open": true,
-          "terminal": true,
-          "batch_tool": true,
-          "code_symbols": true,
-          "copy_path": true,
-          "create_file": true,
-          "delete_path": true,
-          "diagnostics": true,
-          "edit_file": true,
-          "edit_files": true,
-          "fetch": true,
-          "list_directory": true,
-          "move_path": true,
-          "now": true,
-          "path_search": true,
-          "read_file": true,
-          "grep": true,
-          "symbol_info": true,
-          "thinking": true,
-          "create_directory": true
-        },
-        "enable_all_context_servers": true,
-        "context_servers": {}
-      },
       "write": {
         "name": "Write",
         "tools": {
@@ -93,7 +85,7 @@
           "list_directory": true,
           "move_path": true,
           "now": true,
-          "path_search": true,
+          "find_path": true,
           "read_file": true,
           "grep": true,
           "symbol_info": true,
@@ -107,11 +99,11 @@
     "dock": "left",
     "default_model": {
       "provider": "zed.dev",
-      "model": "claude-3-7-sonnet-latest"
+      "model": "claude-sonnet-4-thinking"
     },
     "version": "2"
   },
-  "icon_theme": "Material Icon Theme",
+  "icon_theme": "Catppuccin Macchiato",
   "vim_mode": true,
   "vim": {
     "toggle_relative_line_numbers": true,
@@ -133,33 +125,25 @@
   "buffer_font_size": 15.0,
   "theme": {
     "mode": "system",
-    "light": "Solarized Light",
-    "dark": "Gruvbox Dark Soft"
+    "light": "Catppuccin Latte",
+    "dark": "Catppuccin Macchiato"
   },
   "terminal": {
-    // "font_family": "Berkley Mono Nerd Font",
     "font_family": "JetBrainsMono Nerd Font",
     "font_features": {}
   },
   "languages": {
+    "Markdown": {
+      "show_edit_predictions": true
+    },
+    "Shell Script": {
+      "show_edit_predictions": true
+    },
     "Elixir": {
-      "format_on_save": {
-        "external": {
-          "command": "mix",
-          "arguments": ["format", "--stdin-filename", "{buffer_path}", "-"]
-        }
-      },
-      // "language_servers": ["lexical", "!elixir-ls"] // <- `next-ls` or `lexical`
+      "show_edit_predictions": true,
       "language_servers": ["elixir-ls"] // <- `next-ls` or `lexical`
-      // "language_servers": ["next-ls"] // <- `next-ls` or `lexical`
     },
     "HEEX": {
-      "format_on_save": {
-        "external": {
-          "command": "mix",
-          "arguments": ["format", "--stdin-filename", "{buffer_path}", "-"]
-        }
-      },
       "language_servers": [
         "elixir-ls",
         "tailwindcss-language-server",
@@ -168,11 +152,6 @@
     }
   },
   "lsp": {
-    // "elixir-ls": {
-    //   "settings": {
-    //     "dialyzerEnabled": false
-    //   }
-    // },
     "nil": {
       "initialization_options": {
         "formatting": {

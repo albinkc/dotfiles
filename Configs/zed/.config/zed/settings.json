@@ -8,12 +8,20 @@
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
   "context_servers": {
+    "tidewave-mcp-server": {
+      "source": "custom",
+      "enabled": true,
+      "command": "/Users/albin/mcp-proxy",
+      "args": [
+        "http://localhost:4000/tidewave/mcp"
+      ],
+      "env": {
+                "PORT": "4000"
+            }
+    },
     "tidewave": {
-      "command": {
-        "path": "/Users/albin/projects/mcp-proxy",
-        "args": ["http://localhost:4000/tidewave/mcp"],
-        "env": null
-      },
+      "source": "extension",
+      "enabled": true,
       "settings": {}
     }
   },
@@ -31,6 +39,7 @@
     "diagnostics": false
   },
   "agent": {
+    "play_sound_when_agent_done": true,
     "always_allow_tool_actions": true,
     "default_profile": "write",
     "profiles": {
@@ -90,9 +99,8 @@
     "dock": "left",
     "default_model": {
       "provider": "zed.dev",
-      "model": "claude-sonnet-4-latest"
+      "model": "claude-sonnet-4-thinking"
     },
-    "version": "2"
   },
   "icon_theme": "Catppuccin Macchiato",
   "vim_mode": true,
@@ -116,7 +124,7 @@
   "buffer_font_size": 15.0,
   "theme": {
     "mode": "system",
-    "light": "Solarized Light",
+    "light": "Catppuccin Latte",
     "dark": "Catppuccin Macchiato"
   },
   "terminal": {
@@ -124,6 +132,9 @@
     "font_features": {}
   },
   "languages": {
+    "Markdown": {
+      "show_edit_predictions": true
+    },
     "Shell Script": {
       "show_edit_predictions": true
     },
