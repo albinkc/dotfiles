@@ -40,11 +40,6 @@
           "value" : "/Applications/Chromium.app"
         },
         {
-          "key" : "a",
-          "type" : "application",
-          "value" : "/Applications/Arc.app"
-        },
-        {
           "key" : "s",
           "type" : "application",
           "value" : "/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app"
@@ -53,6 +48,11 @@
           "key" : "z",
           "type" : "application",
           "value" : "/Applications/Zen.app"
+        },
+        {
+          "key" : "d",
+          "type" : "application",
+          "value" : "/Applications/Dia.app"
         }
       ],
       "key" : "b",
@@ -140,6 +140,11 @@
           "key" : "a",
           "type" : "application",
           "value" : "/System/Applications/Utilities/Activity Monitor.app"
+        },
+        {
+          "key" : "p",
+          "type" : "application",
+          "value" : "/Applications/Postgres.app"
         }
       ],
       "key" : "a",
