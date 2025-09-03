@@ -84,4 +84,5 @@ eval "$(zoxide init zsh)"
 # opencode
 export PATH=/Users/albin/.opencode/bin:$PATH
 export PATH=/Users/albin/.local/bin:$PATH
+export MIX_OS_DEPS_COMPILE_PARTITION_COUNT=$(( $(sysctl -n hw.physicalcpu) / 2 ))
 
