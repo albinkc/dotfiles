@@ -17,7 +17,7 @@ alias tree="eza --tree"
 alias vi="nvim"
 alias ll="yazi"
 alias ..="cd .."
-alias nc="cd ~/.config/nvim"
+alias vivi="cd ~/.config/nvim"
 alias nixos="cd /etc/nixos"
 alias np="cd ~/projects/nixos-config/"
 alias nd="cd ~/.config/nix-darwin/"
@@ -46,6 +46,7 @@ alias ms="source .env && mix phx.server"
 export ERL_AFLAGS="-kernel shell_history enabled"
 ## Run after elixir otp upgrades or when elixir-ls is broken
 alias clean_beam='rm -rf _build deps .elixir_ls && mix deps.get && mix compile'
+alias mcc='mix clean && mix compile' 
 
 export EDITOR=neovide
 # Enable Vim mode in Zsh
